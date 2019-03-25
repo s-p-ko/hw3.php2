@@ -1,7 +1,6 @@
 <?php
 namespace App;
 
-use App\Config;
 
 class Db
 {
@@ -12,7 +11,7 @@ class Db
      */
     public function __construct()
     {
-        $config = \app\Config::instance();
+        $config = Config::instance();
         $this->dbh = new \PDO(
             'mysql:host=' . $config->data['db']['host'] . ';dbname=' .
             $config->data['db']['dbname'],
