@@ -7,6 +7,9 @@ namespace App;
  */
 class View implements \Countable, \Iterator
 {
+    /**
+     * @var array
+     */
     protected $data = [];
 
     use MagicTrait, IteratorTrait, CountableTrait;

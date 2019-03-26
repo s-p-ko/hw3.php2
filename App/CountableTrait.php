@@ -7,6 +7,8 @@ namespace App;
  */
 trait CountableTrait
 {
+
+    protected $data;
     /**
      * Count elements of an object
      * @return int The custom count as an integer.
