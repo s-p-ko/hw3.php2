@@ -8,7 +8,7 @@ namespace App;
 trait IteratorTrait
 {
 
-    protected $prop;
+    protected $data = [];
 
     /**
      * Return the current element
@@ -16,7 +16,7 @@ trait IteratorTrait
      */
     public function current()
     {
-        return current($this->prop);
+        return current($this->data);
     }
 
     /**
@@ -25,7 +25,7 @@ trait IteratorTrait
      */
     public function next()
     {
-        next($this->prop);
+        next($this->data);
     }
 
     /**
@@ -34,7 +34,7 @@ trait IteratorTrait
      */
     public function key()
     {
-        return key($this->prop);
+        return key($this->data);
     }
 
     /**
@@ -43,7 +43,7 @@ trait IteratorTrait
      */
     public function valid()
     {
-        return null !== key($this->prop);
+        return null !== key($this->data);
     }
 
     /**
@@ -52,6 +52,6 @@ trait IteratorTrait
      */
     public function rewind()
     {
-        reset($this->prop);
+        reset($this->data);
     }
 }
